@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaPrincipal</class>
+ <widget class="QMainWindow" name="VentanaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1311</width>
+    <height>673</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1311</width>
+    <height>673</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1311</width>
+    <height>673</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>9</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>La Primera S.A.</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Iconos/Icon.ico</normaloff>Iconos/Icon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QMdiArea" name="MDI">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1311</width>
+      <height>573</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="background">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>160</red>
+       <green>160</green>
+       <blue>160</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllToolBarAreas</set>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>29</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="Venta"/>
+   <addaction name="Gastos"/>
+   <addaction name="Compras"/>
+   <addaction name="separator"/>
+   <addaction name="Clientes"/>
+   <addaction name="Proveedores"/>
+   <addaction name="separator"/>
+   <addaction name="Datos"/>
+   <addaction name="Tablas"/>
+   <addaction name="Rankings"/>
+   <addaction name="Pass"/>
+   <addaction name="separator"/>
+   <addaction name="Salir"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1311</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuConfiguracion">
+    <property name="title">
+     <string>Configuracion</string>
+    </property>
+    <widget class="QMenu" name="menuGestion_de_tablas">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>140</y>
+       <width>135</width>
+       <height>116</height>
+      </rect>
+     </property>
+     <property name="tearOffEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Gest. Tablas</string>
+     </property>
+     <addaction name="MZonas"/>
+     <addaction name="MListas"/>
+     <addaction name="MCuentas"/>
+    </widget>
+    <addaction name="menuGestion_de_tablas"/>
+    <addaction name="MEmail"/>
+    <addaction name="MConfig"/>
+   </widget>
+   <widget class="QMenu" name="menuCamioneta">
+    <property name="title">
+     <string>Productos</string>
+    </property>
+    <addaction name="MProductos"/>
+    <addaction name="MPrecios"/>
+   </widget>
+   <widget class="QMenu" name="menuFabrica">
+    <property name="title">
+     <string>Fabrica</string>
+    </property>
+    <addaction name="MPresupuestos"/>
+    <addaction name="MResumC"/>
+   </widget>
+   <addaction name="menuConfiguracion"/>
+   <addaction name="menuCamioneta"/>
+   <addaction name="menuFabrica"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="Venta">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Venta.png</normaloff>Iconos/Venta.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ventas</string>
+   </property>
+  </action>
+  <action name="Gastos">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Gastos.png</normaloff>Iconos/Gastos.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gastos</string>
+   </property>
+  </action>
+  <action name="Clientes">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Clientes.png</normaloff>Iconos/Clientes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clientes</string>
+   </property>
+  </action>
+  <action name="Proveedores">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Proveedor.png</normaloff>Iconos/Proveedor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Proveedores</string>
+   </property>
+  </action>
+  <action name="Tablas">
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Tablas.png</normaloff>Iconos/Tablas.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tablas</string>
+   </property>
+  </action>
+  <action name="Datos">
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Datos.png</normaloff>Iconos/Datos.png</iconset>
+   </property>
+   <property name="text">
+    <string>Datos</string>
+   </property>
+   <property name="toolTip">
+    <string>Datos</string>
+   </property>
+  </action>
+  <action name="Compras">
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Compras.png</normaloff>Iconos/Compras.png</iconset>
+   </property>
+   <property name="text">
+    <string>Compras</string>
+   </property>
+  </action>
+  <action name="Rankings">
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/progreso.png</normaloff>Iconos/progreso.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rankings</string>
+   </property>
+  </action>
+  <action name="Salir">
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Salir.png</normaloff>Iconos/Salir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="MZonas">
+   <property name="text">
+    <string>Zonas</string>
+   </property>
+  </action>
+  <action name="MListas">
+   <property name="text">
+    <string>Listas</string>
+   </property>
+  </action>
+  <action name="MCuentas">
+   <property name="text">
+    <string>Cuentas</string>
+   </property>
+  </action>
+  <action name="MProductos">
+   <property name="text">
+    <string>Productos</string>
+   </property>
+  </action>
+  <action name="MPrecios">
+   <property name="text">
+    <string>Precios</string>
+   </property>
+  </action>
+  <action name="MEmail">
+   <property name="text">
+    <string>Email</string>
+   </property>
+  </action>
+  <action name="MResumC">
+   <property name="text">
+    <string>Resumen de Cuentas</string>
+   </property>
+  </action>
+  <action name="MPresupuestos">
+   <property name="text">
+    <string>Presupuestos</string>
+   </property>
+  </action>
+  <action name="Pass">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Pass.png</normaloff>Iconos/Pass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contraseñas</string>
+   </property>
+  </action>
+  <action name="MConfig">
+   <property name="text">
+    <string>Configuracion</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Venta</sender>
+   <signal>triggered()</signal>
+   <receiver>VentanaPrincipal</receiver>
+   <slot>showVentas()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Salir</sender>
+   <signal>triggered()</signal>
+   <receiver>VentanaPrincipal</receiver>
+   <slot>showSalir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MPrecios</sender>
+   <signal>triggered()</signal>
+   <receiver>VentanaPrincipal</receiver>
+   <slot>showPrecios()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showClientes()</slot>
+  <slot>showVentas()</slot>
+  <slot>showZonas()</slot>
+  <slot>showGastos()</slot>
+  <slot>showProve()</slot>
+  <slot>showCuentasBU()</slot>
+  <slot>showCuentasG()</slot>
+  <slot>showTablas()</slot>
+  <slot>showBDA()</slot>
+  <slot>showCompras()</slot>
+  <slot>showRankings()</slot>
+  <slot>showSalir()</slot>
+  <slot>showProductos()</slot>
+  <slot>showListas()</slot>
+  <slot>showPrecios()</slot>
+  <slot>showResC()</slot>
+  <slot>showEmail()</slot>
+  <slot>showFabTab()</slot>
+  <slot>showPass()</slot>
+  <slot>showSeteo()</slot>
+ </slots>
+</ui>

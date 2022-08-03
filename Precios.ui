@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Precios</class>
+ <widget class="QWidget" name="Precios">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Precios</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Iconos/Icon.ico</normaloff>Iconos/Icon.ico</iconset>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>462</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <widget class="QSplitter" name="splitter_2">
+    <property name="geometry">
+     <rect>
+      <x>313</x>
+      <y>13</y>
+      <width>140</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QPushButton" name="B_Buscar">
+     <property name="text">
+      <string>Buscar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_Salir">
+     <property name="text">
+      <string>Salir</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>16</y>
+      <width>26</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lista:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="C_Lista">
+    <property name="geometry">
+     <rect>
+      <x>41</x>
+      <y>15</y>
+      <width>126</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>172</x>
+      <y>16</y>
+      <width>135</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QRadioButton" name="R_Negocio">
+     <property name="text">
+      <string>Negocio</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="R_Camio">
+     <property name="text">
+      <string>Camioneta</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>461</width>
+     <height>442</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <widget class="QTableWidget" name="T_Lista">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>34</y>
+      <width>389</width>
+      <height>377</height>
+     </rect>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>42</x>
+      <y>416</y>
+      <width>370</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Doble-click en el precio que desea modificar. Los precios deben ser CON IVA</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Line_B">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>6</y>
+      <width>370</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Buscar...</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>B_Buscar</sender>
+   <signal>clicked()</signal>
+   <receiver>Precios</receiver>
+   <slot>Buscar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>T_Lista</sender>
+   <signal>itemChanged(QTableWidgetItem*)</signal>
+   <receiver>Precios</receiver>
+   <slot>SavePrecio()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Line_B</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Precios</receiver>
+   <slot>Search()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_Salir</sender>
+   <signal>clicked()</signal>
+   <receiver>Precios</receiver>
+   <slot>Salir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>T_Lista</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>Precios</receiver>
+   <slot>SetValor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>R_Negocio</sender>
+   <signal>clicked()</signal>
+   <receiver>Precios</receiver>
+   <slot>SetLista()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>R_Camio</sender>
+   <signal>clicked()</signal>
+   <receiver>Precios</receiver>
+   <slot>SetLista()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Buscar()</slot>
+  <slot>SavePrecio()</slot>
+  <slot>Search()</slot>
+  <slot>Salir()</slot>
+  <slot>Cancelar()</slot>
+  <slot>SetValor()</slot>
+  <slot>SetLista()</slot>
+ </slots>
+</ui>
