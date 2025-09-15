@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ABMCli</class>
+ <widget class="QWidget" name="ABMCli">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>438</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>438</width>
+    <height>429</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>438</width>
+    <height>429</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ABM Clientes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Iconos/Icon.ico</normaloff>Iconos/Icon.ico</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>420</width>
+     <height>332</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="title">
+    <string>Datos del Cliente</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <widget class="QLineEdit" name="Line_Direc">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>52</y>
+      <width>279</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>45</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Line_RazonS">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>25</y>
+      <width>279</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>45</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Box_Prov">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>106</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Box_Resp">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>134</y>
+      <width>180</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Box_Lista">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>162</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Line_Alias">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>80</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>45</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Opcional</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Coment">
+    <property name="geometry">
+     <rect>
+      <x>259</x>
+      <y>229</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>306</y>
+      <width>140</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>No está permitido el simbolo ( ' )</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>361</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Camioneta</string>
+    </property>
+    <widget class="QDoubleSpinBox" name="Line_Desc">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>121</x>
+       <y>20</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="Line_Rec">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>121</x>
+       <y>47</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="L_Rec">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>47</y>
+       <width>70</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Recargo %</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="L_Desc">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>20</y>
+       <width>90</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Descuento %</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Lista_Desc">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>77</y>
+       <width>40</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Lista</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="Box_ListaC">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>121</x>
+       <y>78</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>15</y>
+       <width>130</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="Check_Cam">
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>¿Alta en camioneta?</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="Check_Cam2">
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>¿Emitir duplicado?</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="L_Prov_4">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>81</y>
+      <width>22</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alias</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Prov_3">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>164</y>
+      <width>40</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lista</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Prov_2">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>137</y>
+      <width>100</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Responsabilidad</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Dir">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>54</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dirección</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_RazonS">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>26</y>
+      <width>80</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Razón Social</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Prov">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>109</y>
+      <width>85</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Provincia              </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>420</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>7</y>
+      <width>130</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>C.U.I.T. N° :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Line_Cuit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>11</y>
+      <width>180</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>13</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="B_Search">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>20</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Iconos/Search.png</normaloff>Iconos/Search.png</iconset>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>398</y>
+     <width>418</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="B_Agregar">
+      <property name="text">
+       <string>Agregar</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Buscar">
+      <property name="text">
+       <string>Buscar(F1)</string>
+      </property>
+      <property name="shortcut">
+       <string>F1</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Eliminar">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Eliminar</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Canc">
+      <property name="text">
+       <string>Cancelar(Esc)</string>
+      </property>
+      <property name="shortcut">
+       <string>Esc</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Salir">
+      <property name="text">
+       <string>Salir</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>Line_Cuit</tabstop>
+  <tabstop>Line_RazonS</tabstop>
+  <tabstop>Line_Direc</tabstop>
+  <tabstop>Line_Alias</tabstop>
+  <tabstop>Box_Prov</tabstop>
+  <tabstop>Box_Resp</tabstop>
+  <tabstop>Box_Lista</tabstop>
+  <tabstop>B_Agregar</tabstop>
+  <tabstop>B_Buscar</tabstop>
+  <tabstop>B_Eliminar</tabstop>
+  <tabstop>B_Canc</tabstop>
+  <tabstop>B_Salir</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>B_Agregar</sender>
+   <signal>clicked()</signal>
+   <receiver>ABMCli</receiver>
+   <slot>AMCliente()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_Buscar</sender>
+   <signal>clicked()</signal>
+   <receiver>ABMCli</receiver>
+   <slot>B_Clientes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_Eliminar</sender>
+   <signal>clicked()</signal>
+   <receiver>ABMCli</receiver>
+   <slot>ECliente()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_Canc</sender>
+   <signal>clicked()</signal>
+   <receiver>ABMCli</receiver>
+   <slot>Clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_Salir</sender>
+   <signal>clicked()</signal>
+   <receiver>ABMCli</receiver>
+   <slot>Cerrar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>B_Clientes()</slot>
+  <slot>AMCliente()</slot>
+  <slot>ECliente()</slot>
+  <slot>Clear()</slot>
+  <slot>Cerrar()</slot>
+  <slot>Camioneta()</slot>
+  <slot>Search()</slot>
+ </slots>
+</ui>

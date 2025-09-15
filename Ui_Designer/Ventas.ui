@@ -614,6 +614,9 @@
    </widget>
   </widget>
   <widget class="QFrame" name="frame_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -629,6 +632,9 @@
     <enum>QFrame::Plain</enum>
    </property>
    <widget class="QPushButton" name="B_Calcu">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>339</x>
@@ -665,7 +671,7 @@
      <rect>
       <x>109</x>
       <y>11</y>
-      <width>57</width>
+      <width>40</width>
       <height>20</height>
      </rect>
     </property>
@@ -682,7 +688,7 @@
    <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>157</x>
       <y>12</y>
       <width>69</width>
       <height>16</height>
@@ -695,9 +701,9 @@
    <widget class="QLineEdit" name="L_Imptot">
     <property name="geometry">
      <rect>
-      <x>242</x>
+      <x>230</x>
       <y>11</y>
-      <width>89</width>
+      <width>100</width>
       <height>20</height>
      </rect>
     </property>
@@ -712,193 +718,157 @@
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="B_Busc">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>341</x>
-     <y>475</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>Buscar(F1)</string>
-   </property>
-   <property name="shortcut">
-    <string>F1</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Cerrar">
-   <property name="geometry">
-    <rect>
-     <x>503</x>
-     <y>475</y>
-     <width>74</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>Cerrar</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Anular">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>99</x>
-     <y>475</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>Anular</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Agregar">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>18</x>
-     <y>475</y>
-     <width>75</width>
-     <height>23</height>
+     <y>471</y>
+     <width>648</width>
+     <height>25</height>
     </rect>
    </property>
-   <property name="focusPolicy">
-    <enum>Qt::StrongFocus</enum>
-   </property>
-   <property name="text">
-    <string>Agregar(F9)</string>
-   </property>
-   <property name="shortcut">
-    <string>F9</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Grabar">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>261</x>
-     <y>475</y>
-     <width>74</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::StrongFocus</enum>
-   </property>
-   <property name="text">
-    <string>Grabar(F12)</string>
-   </property>
-   <property name="shortcut">
-    <string>F12</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Mod">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>179</x>
-     <y>475</y>
-     <width>78</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>Modificar(F10)</string>
-   </property>
-   <property name="shortcut">
-    <string>F10</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Canc">
-   <property name="geometry">
-    <rect>
-     <x>422</x>
-     <y>475</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>Cancelar(Esc)</string>
-   </property>
-   <property name="shortcut">
-    <string>Esc</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L_Coment">
-   <property name="geometry">
-    <rect>
-     <x>583</x>
-     <y>470</y>
-     <width>170</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="B_Agregar">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="text">
+       <string>Agregar(F9)</string>
+      </property>
+      <property name="shortcut">
+       <string>F9</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Anular">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>Anular</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Elim">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>Eliminar</string>
+      </property>
+      <property name="shortcut">
+       <string>F10</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Mod">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>Modificar(F10)</string>
+      </property>
+      <property name="shortcut">
+       <string>F10</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Grabar">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="text">
+       <string>Grabar(F12)</string>
+      </property>
+      <property name="shortcut">
+       <string>F12</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Busc">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>Buscar(F1)</string>
+      </property>
+      <property name="shortcut">
+       <string>F1</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Canc">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>Cancelar(Esc)</string>
+      </property>
+      <property name="shortcut">
+       <string>Esc</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="B_Cerrar">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>Cerrar</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <tabstops>
@@ -1095,6 +1065,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>B_Elim</sender>
+   <signal>clicked()</signal>
+   <receiver>Ventas</receiver>
+   <slot>Eliminar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>483</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>B_Periodo()</slot>
@@ -1107,5 +1093,6 @@
   <slot>ModFact()</slot>
   <slot>AnularFact()</slot>
   <slot>Cerrar()</slot>
+  <slot>Eliminar()</slot>
  </slots>
 </ui>

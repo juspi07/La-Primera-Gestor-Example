@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1311</width>
-    <height>673</height>
+    <height>776</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1311</width>
-    <height>673</height>
+    <height>776</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1311</width>
-    <height>673</height>
+    <height>776</height>
    </size>
   </property>
   <property name="font">
@@ -46,9 +46,21 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1311</width>
-      <height>573</height>
+      <width>1320</width>
+      <height>671</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1320</width>
+      <height>671</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1320</width>
+      <height>671</height>
+     </size>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -109,14 +121,15 @@
    <addaction name="Venta"/>
    <addaction name="Gastos"/>
    <addaction name="Compras"/>
+   <addaction name="Recibos"/>
    <addaction name="separator"/>
    <addaction name="Clientes"/>
    <addaction name="Proveedores"/>
    <addaction name="separator"/>
-   <addaction name="Datos"/>
    <addaction name="Tablas"/>
    <addaction name="Rankings"/>
-   <addaction name="Pass"/>
+   <addaction name="Cuentas"/>
+   <addaction name="Generar"/>
    <addaction name="separator"/>
    <addaction name="Salir"/>
   </widget>
@@ -126,7 +139,7 @@
      <x>0</x>
      <y>0</y>
      <width>1311</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="defaultUp">
@@ -139,10 +152,10 @@
     <widget class="QMenu" name="menuGestion_de_tablas">
      <property name="geometry">
       <rect>
-       <x>172</x>
-       <y>140</y>
-       <width>135</width>
-       <height>116</height>
+       <x>140</x>
+       <y>128</y>
+       <width>159</width>
+       <height>150</height>
       </rect>
      </property>
      <property name="tearOffEnabled">
@@ -154,6 +167,7 @@
      <addaction name="MZonas"/>
      <addaction name="MListas"/>
      <addaction name="MCuentas"/>
+     <addaction name="MPtoVentas"/>
     </widget>
     <addaction name="menuGestion_de_tablas"/>
     <addaction name="MEmail"/>
@@ -171,11 +185,22 @@
      <string>Fabrica</string>
     </property>
     <addaction name="MPresupuestos"/>
-    <addaction name="MResumC"/>
+   </widget>
+   <widget class="QMenu" name="menuFacturacion">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>Facturacion</string>
+    </property>
+    <addaction name="actionFacturador"/>
+    <addaction name="actionNotaC"/>
+    <addaction name="actionObFact"/>
    </widget>
    <addaction name="menuConfiguracion"/>
    <addaction name="menuCamioneta"/>
    <addaction name="menuFabrica"/>
+   <addaction name="menuFacturacion"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="Venta">
@@ -233,18 +258,6 @@
    </property>
    <property name="text">
     <string>Tablas</string>
-   </property>
-  </action>
-  <action name="Datos">
-   <property name="icon">
-    <iconset>
-     <normaloff>Iconos/Datos.png</normaloff>Iconos/Datos.png</iconset>
-   </property>
-   <property name="text">
-    <string>Datos</string>
-   </property>
-   <property name="toolTip">
-    <string>Datos</string>
    </property>
   </action>
   <action name="Compras">
@@ -314,26 +327,80 @@
     <string>Presupuestos</string>
    </property>
   </action>
-  <action name="Pass">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>Iconos/Pass.png</normaloff>Iconos/Pass.png</iconset>
-   </property>
-   <property name="text">
-    <string>Contraseñas</string>
-   </property>
-  </action>
   <action name="MConfig">
    <property name="text">
     <string>Configuracion</string>
    </property>
   </action>
+  <action name="Cuentas">
+   <property name="icon">
+    <iconset>
+     <normaloff>Iconos/Cuentas.png</normaloff>Iconos/Cuentas.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cuentas</string>
+   </property>
+  </action>
+  <action name="MPtoVentas">
+   <property name="text">
+    <string>Pto. Ventas</string>
+   </property>
+  </action>
+  <action name="actionFacturacion">
+   <property name="text">
+    <string>Facturacion</string>
+   </property>
+  </action>
+  <action name="actionFacturador">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Facturador</string>
+   </property>
+  </action>
+  <action name="actionNotaC">
+   <property name="text">
+    <string>Nota de Credito</string>
+   </property>
+  </action>
+  <action name="Generar">
+   <property name="text">
+    <string>Generar</string>
+   </property>
+  </action>
+  <action name="Recibos">
+   <property name="text">
+    <string>Recibos</string>
+   </property>
+  </action>
+  <action name="actionObFact">
+   <property name="text">
+    <string>Obtener Factura</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
+  <connection>
+   <sender>Clientes</sender>
+   <signal>triggered()</signal>
+   <receiver>VentanaPrincipal</receiver>
+   <slot>showClientes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>Venta</sender>
    <signal>triggered()</signal>
@@ -404,5 +471,11 @@
   <slot>showFabTab()</slot>
   <slot>showPass()</slot>
   <slot>showSeteo()</slot>
+  <slot>showPtoVenta()</slot>
+  <slot>showFacturacion()</slot>
+  <slot>showNotaC()</slot>
+  <slot>showGenerar()</slot>
+  <slot>showRecibos()</slot>
+  <slot>showObtFact()</slot>
  </slots>
 </ui>

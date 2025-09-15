@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>657</width>
+    <width>494</width>
     <height>304</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>657</width>
+    <width>494</width>
     <height>304</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>657</width>
+    <width>494</width>
     <height>304</height>
    </size>
   </property>
@@ -29,12 +29,35 @@
    <iconset>
     <normaloff>Iconos/Icon.ico</normaloff>Iconos/Icon.ico</iconset>
   </property>
-  <widget class="QTableWidget" name="T_Prod">
+  <widget class="QPushButton" name="B_Buscar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>9</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Yu Gothic</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="Tabla_Productos">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>40</y>
-     <width>621</width>
+     <width>471</width>
      <height>221</height>
     </rect>
    </property>
@@ -47,6 +70,9 @@
    <property name="accessibleName">
     <string/>
    </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+   </property>
    <property name="defaultDropAction">
     <enum>Qt::IgnoreAction</enum>
    </property>
@@ -55,6 +81,9 @@
    </property>
    <property name="selectionBehavior">
     <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <property name="textElideMode">
+    <enum>Qt::ElideMiddle</enum>
    </property>
    <property name="columnCount">
     <number>0</number>
@@ -72,11 +101,18 @@
   <widget class="QPushButton" name="B_Canc">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>270</y>
+     <x>390</x>
+     <y>269</y>
      <width>75</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Yu Gothic</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="focusPolicy">
     <enum>Qt::ClickFocus</enum>
@@ -87,68 +123,48 @@
    <property name="shortcut">
     <string>Esc</string>
    </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
   </widget>
-  <widget class="QLineEdit" name="L_Prod">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>11</y>
-     <width>190</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_Buscar">
-   <property name="geometry">
-    <rect>
-     <x>264</x>
+     <x>20</x>
      <y>10</y>
-     <width>75</width>
-     <height>23</height>
+     <width>220</width>
+     <height>22</height>
     </rect>
    </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>Buscar</string>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="L_Cliente">
-   <property name="geometry">
-    <rect>
-     <x>21</x>
-     <y>11</y>
-     <width>43</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Producto</string>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="L_Cliente">
+      <property name="font">
+       <font>
+        <family>Yu Gothic</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Productos</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="Line_Producto"/>
+    </item>
+   </layout>
   </widget>
  </widget>
- <tabstops>
-  <tabstop>L_Prod</tabstop>
-  <tabstop>T_Prod</tabstop>
- </tabstops>
  <resources/>
  <connections>
   <connection>
-   <sender>T_Prod</sender>
-   <signal>cellDoubleClicked(int,int)</signal>
+   <sender>B_Buscar</sender>
+   <signal>clicked()</signal>
    <receiver>B_Productos</receiver>
-   <slot>Resultados()</slot>
+   <slot>QueryProductos()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>320</x>
-     <y>150</y>
+     <x>267</x>
+     <y>20</y>
     </hint>
     <hint type="destinationlabel">
      <x>328</x>
@@ -157,7 +173,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>L_Prod</sender>
+   <sender>Line_Producto</sender>
    <signal>returnPressed()</signal>
    <receiver>B_Productos</receiver>
    <slot>QueryProductos()</slot>
@@ -165,6 +181,22 @@
     <hint type="sourcelabel">
      <x>135</x>
      <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Tabla_Productos</sender>
+   <signal>cellDoubleClicked(int,int)</signal>
+   <receiver>B_Productos</receiver>
+   <slot>Resultados()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>150</y>
     </hint>
     <hint type="destinationlabel">
      <x>328</x>
@@ -189,33 +221,33 @@
    </hints>
   </connection>
   <connection>
-   <sender>B_Buscar</sender>
-   <signal>clicked()</signal>
-   <receiver>B_Productos</receiver>
-   <slot>QueryProductos()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>298</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>328</x>
-     <y>151</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>L_Prod</sender>
+   <sender>Line_Producto</sender>
    <signal>textChanged(QString)</signal>
    <receiver>B_Productos</receiver>
    <slot>QueryProductos()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>164</x>
+     <x>160</x>
      <y>20</y>
     </hint>
     <hint type="destinationlabel">
-     <x>328</x>
+     <x>246</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Tabla_Productos</sender>
+   <signal>cellPressed(int,int)</signal>
+   <receiver>B_Productos</receiver>
+   <slot>Resultados()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
      <y>151</y>
     </hint>
    </hints>
@@ -225,5 +257,6 @@
   <slot>Resultados()</slot>
   <slot>QueryProductos()</slot>
   <slot>Cerrar()</slot>
+  <slot>Seleccion()</slot>
  </slots>
 </ui>
